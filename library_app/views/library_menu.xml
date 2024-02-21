@@ -1,0 +1,20 @@
+<odoo>
+
+    <!-- Menú de la App Library -->
+
+    <menuitem id="menu_library" name="Biblioteca" />
+
+    <!-- Acción para abrir la lista de libros -->
+    <record id="action_library_book" model="ir.actions.act_window">
+        <field name="name">Libros de la biblioteca</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Submenú para abrir la lista de libros -->
+    <menuitem id="menu_library_book"
+        name="Libros"
+        parent="menu_library"
+        action="action_library_book" />
+
+</odoo>
